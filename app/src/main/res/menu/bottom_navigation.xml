@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/action_likes"
+        android:icon="@drawable/ic_like"
+        android:visible="false"
+        app:showAsAction="never"
+        android:title="@string/like" />
+
+    <item
+        android:id="@+id/action_llikes"
+        android:icon="@drawable/ic_thumbs"
+        android:title="@string/lllikes" />
+
+</menu>

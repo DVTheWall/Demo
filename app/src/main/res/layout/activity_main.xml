@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="center"
+        android:background="@android:color/holo_red_dark"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ToolbarTheme">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/actv_header_name"
+                style="@style/Toolbar.TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+    </FrameLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:itemBackground="@drawable/navi_background"
+        app:itemIconTint="@drawable/navi_test"
+        app:itemTextColor="@drawable/navi_test"
+        app:menu="@menu/bottom_navigation" />
+
+
+<!--
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+
+        <LinearLayout
+            android:id="@+id/ll_footar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#3b3832"
+            android:minHeight="50dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_Submit_Search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/viewselecternew"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/tv_fsearch_Dimond"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_margin_3"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:src="@drawable/ic_home"
+                    android:textColor="@drawable/textbutton_selector"
+                    android:textSize="@dimen/text_18" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_tsearchDiamond"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center"
+                    android:text="Home"
+                    android:textColor="@drawable/textbutton_selector"
+                    android:textSize="@dimen/font_10" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_likes"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/viewselecternew"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/tv_fsave_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_margin_3"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:src="@drawable/ic_like"
+                    android:textColor="@drawable/textbutton_selector"
+                    android:textSize="@dimen/text_18" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_tsaveSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_margin_2"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:text="Likes"
+                    android:textColor="@drawable/textbutton_selector"
+                    android:textSize="@dimen/font_10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Reset_Search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/viewselecternew"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/tv_fsearch_reset"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/padding_margin_3"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:src="@drawable/ic_thumbs"
+                    android:textColor="@drawable/textbutton_selector"
+                    android:textSize="@dimen/text_18" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_tsearchReset"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center"
+                    android:text="@string/lllikes"
+                    android:textColor="@drawable/textbutton_selector"
+                    android:textSize="@dimen/font_10" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="@dimen/height_width_56"
+                android:layout_height="@dimen/height_width_50"
+                android:layout_gravity="right|end"
+                android:adjustViewBounds="true"
+                android:padding="@dimen/padding_margin_10"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/footerlogo" />
+        </LinearLayout>
+-->
+
+</LinearLayout>
+
