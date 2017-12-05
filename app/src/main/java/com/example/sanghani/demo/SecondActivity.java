@@ -187,8 +187,8 @@ public class SecondActivity extends AppCompatActivity implements ChangeCurrentFr
 //            overridePendingTransition(R.anim.left_in, R.anim.right_out);
 
         } else {
-
-            super.onBackPressed();
+            startActivity(new Intent(activity,MainActivity.class));
+//            super.onBackPressed();
 //            overridePendingTransition(R.anim.left_in, R.anim.right_out);
 
         }
