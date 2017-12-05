@@ -180,7 +180,7 @@ public class SecondActivity extends AppCompatActivity implements ChangeCurrentFr
     @Override
     public void onBackPressed() {
 
-        if (getSupportFragmentManager().getBackStackEntryCount() == 1) {
+       /* if (getSupportFragmentManager().getBackStackEntryCount() == 1) {
 
             startActivity(new Intent(activity,MainActivity.class));
             finish();
@@ -191,7 +191,10 @@ public class SecondActivity extends AppCompatActivity implements ChangeCurrentFr
 //            super.onBackPressed();
 //            overridePendingTransition(R.anim.left_in, R.anim.right_out);
 
-        }
+        }*/
+
+        startActivity(new Intent(activity,MainActivity.class));
+        finish();
 
     }
 }
