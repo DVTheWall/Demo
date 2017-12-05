@@ -18,6 +18,8 @@ import fragment.lllikesFragment;
 
 public class MainActivity extends AppCompatActivity {
 
+
+//    https://tutorialwing.com/android-bottom-navigation-view-tutorial-with-example/
     Activity activity;
     Toolbar toolbar;
 
